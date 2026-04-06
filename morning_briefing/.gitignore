@@ -1,0 +1,17 @@
+# 環境変数（APIキー等を含む — 絶対にコミットしないこと）
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+
+# ログ（日次生成）
+logs/*.log
+
+# Windows
+Thumbs.db
+Desktop.ini
