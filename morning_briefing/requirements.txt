@@ -1,0 +1,17 @@
+# Morning Briefing System — Python 依存パッケージ
+# インストール: pip install -r requirements.txt
+
+# Claude API
+anthropic>=0.40.0
+
+# RSS フィードのパース
+feedparser>=6.0.0
+
+# HTTP リクエスト
+requests>=2.31.0
+
+# 環境変数 (.env ファイルの読み込み)
+python-dotenv>=1.0.0
+
+# YAML 設定ファイル
+PyYAML>=6.0

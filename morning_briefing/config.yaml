@@ -1,0 +1,57 @@
+# =============================================
+# Morning Briefing System — 設定ファイル
+# =============================================
+
+# Claude API 設定
+claude:
+  model: "claude-opus-4-6"
+  max_tokens: 8000
+  # adaptive thinking を有効化（複雑な分析に最適）
+  thinking:
+    type: "adaptive"
+
+# ニュースソース (RSS)
+news_sources:
+  politics:
+    name: "政治"
+    feeds:
+      - url: "https://www.nhk.or.jp/rss/news/cat6.xml"
+        name: "NHK政治"
+      - url: "https://news.yahoo.co.jp/rss/topics/domestic.xml"
+        name: "Yahoo!ニュース 国内"
+    max_articles: 10  # 取得する最大記事数（その中から最重要1本を選定）
+
+  economy:
+    name: "経済"
+    feeds:
+      - url: "https://www.nhk.or.jp/rss/news/cat3.xml"
+        name: "NHK経済"
+      - url: "https://news.yahoo.co.jp/rss/topics/economy.xml"
+        name: "Yahoo!ニュース 経済"
+    max_articles: 10
+
+  business:
+    name: "ビジネス"
+    feeds:
+      - url: "https://news.yahoo.co.jp/rss/topics/business.xml"
+        name: "Yahoo!ニュース ビジネス"
+      - url: "https://www.nhk.or.jp/rss/news/cat4.xml"
+        name: "NHK科学・文化"
+    max_articles: 10
+
+# メール設定
+email:
+  subject_prefix: "📰 Morning Brief"
+  smtp_host: "smtp.gmail.com"
+  smtp_port: 587
+
+# リトライ設定
+retry:
+  max_attempts: 3
+  wait_seconds: 5
+
+# ログ設定
+logging:
+  level: "INFO"  # DEBUG / INFO / WARNING / ERROR
+  log_dir: "logs"
+  keep_days: 30  # ログ保持日数
